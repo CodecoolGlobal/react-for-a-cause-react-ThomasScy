@@ -1,7 +1,7 @@
 export default function Navbar() {
    return (
-    <section className="navbar">
+    <div className="navbar">
         <h2>this will be the navbar</h2>
-    </section>
+    </div>
    );
 };

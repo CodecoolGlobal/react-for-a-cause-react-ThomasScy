@@ -1,13 +1,90 @@
-.App {
-  text-align: center;
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #18191a;
+  color: white;
+  height: 50px;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.landing {
+  background-image: url("../public/pix/bike2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px;
+}
+
+#rotating-info-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+
+#rotating-info-textfield {
+  position: absolute;
+  background-color: #085bad;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#rotating-info-rotator {
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  height: 600px;
+  display: flex;
+}
+
+.rotating-info-bubble-container {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  width: 100%;
+  display: flex;
+}
+
+#ribc1 {
+  justify-items: center;
+}
+
+.rotating-info-bubble {
+  margin: 0;
+  padding: 0;
+  background-color: #83b7ea;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #18191a;
+  color: white;
+  height: 50px;
+  margin: 0;
+}
+
+
+
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -22,17 +99,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
