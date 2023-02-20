@@ -2,9 +2,17 @@
   font-family: manrope;
   src: url(fonts/Manrope/Manrope-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: marcellus;
+  src: url(fonts/Marcellus/Marcellus-Regular.ttf);
+}
+
 
 * {
   font-family: manrope;
+}
+p {
+  font-family: marcellus;
 }
 
 body {
