@@ -7,12 +7,102 @@
   src: url(fonts/Marcellus/Marcellus-Regular.ttf);
 }
 
-
-* {
-  font-family: manrope;
+h1,
+h2,
+h3 {
+  font-family: marcellus;
 }
 p {
-  font-family: marcellus;
+  font-family: manrope;
+}
+.first-color { 
+  /* https://palettes.shecodes.io/palettes/195 */
+	background: #4A3933; 
+}	
+.second-color { 
+	background: #F0A500; 
+}
+.third-color { 
+	/* background: #E45826;  */
+  background: #87b026; 
+}
+.fourth-color { 
+	background: #E6D5B8; 
+}
+
+.landing {
+  background-image: url("../public/pix/bike2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  /* margin: 1rem; */
+  text-align: center;
+}
+.site-title h1 {
+  font-size: 4rem;
+  color: #87b026;
+}
+.nav {
+  background-color: #4A3933;
+  color: #E6D5B8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav li.active {
+  /* background-color: #F0A500; */
+}
+.nav li:hover {
+  color: #87b026;
+}
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+}
+.nav button {
+  background-color: #f6c70a;
+  width: 74px;
+  height: 74px;
+  border: 7px solid black;
+  outline: 3px solid #E6D5B8;
+  font-size: 1rem;
+  color: black;
+}
+.nav button:hover {
+  background-color: #87b026;
+}
+.nav button:active {
+  font-size: 1.1rem;
+}
+.logo {
+  width: 80px;
 }
 
 body {

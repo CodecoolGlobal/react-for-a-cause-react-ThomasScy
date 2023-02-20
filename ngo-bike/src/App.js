@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <LandingPage/>
+      <div className="container"><LandingPage/></div>
       <AboutUs/>
       <Contact/>
       <Footer/>
