@@ -12,7 +12,7 @@ h2,
 h3 {
   font-family: marcellus;
 }
-p {
+li, a, button {
   font-family: manrope;
 }
 .first-color { 
@@ -48,10 +48,12 @@ p {
 }
 .site-title h1 {
   font-size: 4rem;
+  font-variant: small-caps;
   color: #87b026;
 }
 .nav {
-  background-color: #4A3933;
+  background-color: #4a3933ec;
+  backdrop-filter: blur(3px);
   color: #E6D5B8;
   display: flex;
   justify-content: space-between;
@@ -99,7 +101,8 @@ p {
   background-color: #87b026;
 }
 .nav button:active {
-  font-size: 1.1rem;
+  border: 8px solid black;
+  font-size: 0.95rem;
 }
 .logo {
   width: 80px;
