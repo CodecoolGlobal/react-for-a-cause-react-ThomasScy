@@ -2,12 +2,23 @@ section {
   height: 100vh;
 }
 
-#rotating-info-container {
+.about {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: grid;
   justify-items: center;
   align-items: center;
+}
+
+#rotating-info-container {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  
 }
 
 
@@ -24,24 +35,44 @@ section {
 #rotating-info-rotator {
   margin: 0;
   padding: 0;
-  width: 600px;
-  height: 600px;
-  display: flex;
+  width: 800px;
+  height: 800px;
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  z-index: 5;
+  animation: aboutAnimation 1s ease-in-out infinite;
+}
+
+@keyframes aboutAnimation {
+  to {
+      transform: rotate(0.25turn);
+  }
 }
 
 .rotating-info-bubble-container {
   margin: 0;
   padding: 0;
-  height: 200px;
-  width: 100%;
-  display: flex;
+  height: calc(800px / 3);
+  width: 800px;
+  text-justify: center;
+  /* display: flex;
+  flex-direction:column; */
 }
 
-#ribc1 {
-  justify-items: center;
+#ribc1,
+#ribc3 {
+  text-align: center;
 }
+
+#ribc2 {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .rotating-info-bubble {
+  display: inline-block;
+  text-align: center;
   margin: 0;
   padding: 0;
   background-color: #83b7ea;

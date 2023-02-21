@@ -7,11 +7,13 @@ export default function AboutUs() {
                     <div className="rotating-info-bubble-container" id="ribc1">
                         <div className="rotating-info-bubble"></div>
                     </div>
-                    <div className="rotating-info-bubble-container" id="ribc2"></div>
+                    <div className="rotating-info-bubble-container" id="ribc2">
                         <div className="rotating-info-bubble"></div>
                         <div className="rotating-info-bubble"></div>
-                    <div className="rotating-info-bubble-container" id="ribc3"></div>
+                    </div>
+                    <div className="rotating-info-bubble-container" id="ribc3">
                         <div className="rotating-info-bubble"></div>
+                    </div>
                 </div>
             </div>
         </section>
