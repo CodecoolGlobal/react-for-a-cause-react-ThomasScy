@@ -26,6 +26,7 @@ li, a, button {
 *{
   box-sizing: border-box;
   margin: 0;
+  scrollbar-color: var(--main-third-color)
 }
 
 body {

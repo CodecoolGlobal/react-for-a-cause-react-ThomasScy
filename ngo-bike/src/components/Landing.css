@@ -1,22 +1,58 @@
 .landing {
-    background-image: url("https://photography.bicyclingaroundtheworld.nl/wp-content/uploads/2019/01/africa-children-bicycle-water.jpg");
-    /* https://www.un.org/sites/un2.un.org/files/field/image/2022/06/wbr_healthcare3.jpg */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% auto;
-    background-attachment: scroll;
-    /* padding: 100px; */
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .landing h1 {
-    color: var(--main-third-color)
-  }
-  .landing h3 {
-    color: var(--main-fourth-color)
-  }
-  .landing p {
-    color: var(--main-fourth-color)
-  }
+  /* background-image: url("https://photography.bicyclingaroundtheworld.nl/wp-content/uploads/2019/01/africa-children-bicycle-water.jpg"); */
+  /* https://www.un.org/sites/un2.un.org/files/field/image/2022/06/wbr_healthcare3.jpg */
+  background-color: var(--main-first-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  background-attachment: scroll;
+  /* padding: 100px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  height: 90vh;
+}
+.landing h1 {
+  color: var(--main-third-color)
+}
+.landing h3 {
+  color: var(--main-fourth-color)
+}
+.landing p {
+  color: var(--main-fourth-color)
+}
+
+.swiper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--main-second-color);
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;;
+  /* max-width: 1300px; */
+  height: 100%;
+  /* max-height: 90vh; */
+  object-fit: cover;
+  position: center;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--main-third-color);
+}
+.swiper-button-prev, .swiper-button-next {
+  color: var(--main-fourth-color);
+}
