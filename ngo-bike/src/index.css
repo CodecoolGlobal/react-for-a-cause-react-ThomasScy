@@ -15,19 +15,12 @@ h3 {
 li, a, button {
   font-family: manrope;
 }
-.first-color { 
+:root {
   /* https://palettes.shecodes.io/palettes/195 */
-	background: #4A3933; 
-}	
-.second-color { 
-	background: #F0A500; 
-}
-.third-color { 
-	/* background: #E45826;  */
-  background: #87b026; 
-}
-.fourth-color { 
-	background: #E6D5B8; 
+  --main-first-color: #4A3933;
+  --main-second-color: #F0A500;
+  --main-third-color: #87b026;
+  --main-fourth-color: #E6D5B8;
 }
 
 .landing {
@@ -49,12 +42,12 @@ li, a, button {
 .site-title h1 {
   font-size: 4rem;
   font-variant: small-caps;
-  color: #87b026;
+  color: var(--main-third-color);
 }
 .nav {
-  background-color: #4a3933ec;
+  background-color: var(--main-first-color);
   backdrop-filter: blur(3px);
-  color: #E6D5B8;
+  color: var(--main-fourth-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +71,7 @@ li, a, button {
   /* background-color: #F0A500; */
 }
 .nav li:hover {
-  color: #87b026;
+  color: var(--main-third-color);
 }
 .nav a {
   color: inherit;
@@ -93,12 +86,12 @@ li, a, button {
   width: 74px;
   height: 74px;
   border: 7px solid black;
-  outline: 3px solid #E6D5B8;
+  outline: 3px solid var(--main-fourth-color);
   font-size: 1rem;
   color: black;
 }
 .nav button:hover {
-  background-color: #87b026;
+  background-color: var(--main-third-color);
 }
 .nav button:active {
   border: 8px solid black;
