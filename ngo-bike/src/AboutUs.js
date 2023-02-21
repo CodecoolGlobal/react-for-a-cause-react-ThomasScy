@@ -1,6 +1,6 @@
 export default function AboutUs() {
     return (
-        <section className="about">
+        <section id="about" className="about">
             <div id="rotating-info-container">
                 <div id="rotating-info-textfield"></div>
                 <div id="rotating-info-rotator">

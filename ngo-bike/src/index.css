@@ -30,6 +30,10 @@ li, a, button {
   background-size: cover;
   background-attachment: fixed;
   padding: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 *{
   box-sizing: border-box;
@@ -40,7 +44,8 @@ li, a, button {
   text-align: center;
 }
 .site-title h1 {
-  font-size: 4rem;
+  margin: 0;
+  font-size: 5.0rem;
   font-variant: small-caps;
   color: var(--main-third-color);
 }
@@ -54,10 +59,14 @@ li, a, button {
   gap: 2rem;
   padding: 0 1rem;
   
-  position: fixed;
+  position: sticky;
+  z-index: 5;
   left: 0;
   top: 0;
   width: 100%;
+}
+.nav h1 {
+  margin-left: 1rem;
 }
 
 .nav ul {
@@ -79,7 +88,7 @@ li, a, button {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0.25rem;
+  /* padding: 0.25rem; */
 }
 .nav button {
   background-color: #f6c70a;
@@ -99,6 +108,16 @@ li, a, button {
 }
 .logo {
   width: 80px;
+}
+
+.landing h1 {
+  color: var(--main-third-color)
+}
+.landing h3 {
+  color: var(--main-fourth-color)
+}
+.landing p {
+  color: var(--main-fourth-color)
 }
 
 body {
