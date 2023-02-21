@@ -1,3 +1,5 @@
+import './Landing.css';
+
 export default function LandingPage() {
     return (
     <section id="landing" className="landing">
