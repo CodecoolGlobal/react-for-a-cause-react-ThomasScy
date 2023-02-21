@@ -56,3 +56,8 @@
 .swiper-button-prev, .swiper-button-next {
   color: var(--main-fourth-color);
 }
+.swiper-pagination-bullet {
+  border-radius: 0%;
+  width: 30px;
+  height: 4px;
+}
