@@ -47,16 +47,11 @@ section {
   height: 800px;
   /* z-index: 5; */
   /* transform: rotate(90deg); */
-  animation: aboutAnimation 1s ease-in-out infinite;
+  animation: aboutAnimationCw 1s ease-in-out;
 }
 
-@keyframes aboutAnimation {
-  to {
-      transform: rotate(0.25turn);
-  }
-}
 
-.rotating-info-bubble {
+.about-bubble {
   position: absolute;
   /* display: inline-block; */
   text-align: center;
@@ -66,10 +61,27 @@ section {
   border-radius: 50%;
   height: 200px;
   width: 200px;
-  z-index: 5;
+  z-index: 10;
+}
+.about-bubble-rotation-ccw {
+  position: absolute;
+  /* display: inline-block; */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: var(--main-second-color);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  z-index: 10;
+  animation: aboutAnimationCcw 1s ease-in-out;
 }
 
-#bubble1 {
+/* .bubble-rotation-ccw {
+  animation: aboutAnimationCcw 1s ease-in-out;
+} */
+
+/* #bubble1 {
   top: 0px;
   left: 300px;
 }
@@ -84,7 +96,7 @@ section {
 #bubble4 {
   left: 0px;
   top: 300px;
-}
+} */
 
 .footer {
   position: fixed;
@@ -97,6 +109,16 @@ section {
   margin: 0;
 }
 
+@keyframes aboutAnimationCw {
+  to {
+      transform: rotate(0.25turn);
+  }
+}
+@keyframes aboutAnimationCcw {
+  to {
+      transform: rotate(-0.25turn);
+  }
+}
 
 
 
