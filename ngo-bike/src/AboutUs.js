@@ -1,19 +1,21 @@
+import React, {useState} from "react";
+
 export default function AboutUs() {
+    const [infoRotation, setInfoRotation] = useState("about-bubble-rotator-still");
+
+    function handleBubbleClick(bubble) {
+        setInfoRotation("about-bubble-rotator-quarter-Rotation");
+    }
+
     return (
-        <section id="about" className="about">
-            <div id="rotating-info-container">
-                <div id="rotating-info-textfield"></div>
-                <div id="rotating-info-rotator">
-                    <div className="rotating-info-bubble-container" id="ribc1">
-                        <div className="rotating-info-bubble"></div>
-                    </div>
-                    <div className="rotating-info-bubble-container" id="ribc2">
-                        <div className="rotating-info-bubble"></div>
-                        <div className="rotating-info-bubble"></div>
-                    </div>
-                    <div className="rotating-info-bubble-container" id="ribc3">
-                        <div className="rotating-info-bubble"></div>
-                    </div>
+        <section className="about">
+            <div id="about-info-container">
+                <div id="about-info-textfield"></div>
+                <div id={infoRotation}>
+                    <div className="rotating-info-bubble" id="bubble1" onClick={e => handleBubbleClick(e.target)}>1</div>
+                    <div className="rotating-info-bubble" id="bubble2" onClick={e => handleBubbleClick(e.target)}>2</div>
+                    <div className="rotating-info-bubble" id="bubble3" onClick={e => handleBubbleClick(e.target)}>3</div>
+                    <div className="rotating-info-bubble" id="bubble4" onClick={e => handleBubbleClick(e.target)}>4</div>
                 </div>
             </div>
         </section>
