@@ -36,11 +36,12 @@
 .footer a:hover {
     color: var(--main-third-color);
 }
-.footer a > svg:hover {
+
+.footer a>svg:hover {
     fill: var(--main-third-color);
 
 }
+
 .footer .copyright {
     margin-top: 0.75rem;
 }
-
