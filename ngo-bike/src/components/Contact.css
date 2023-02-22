@@ -1,0 +1,26 @@
+.contact {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contact .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contact input {
+    width: 20rem
+}
+.contact button {
+    width: 10rem
+}
+.contact hr {
+    width: 60%;
+    color: black;
+    box-shadow: 0 1px 10px;
+    align-self: center;
+}
