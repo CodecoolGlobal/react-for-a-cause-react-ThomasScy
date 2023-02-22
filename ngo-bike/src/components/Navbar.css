@@ -4,12 +4,12 @@
   }
   .site-title h1 {
     margin: 0;
-    font-size: 5.0rem;
+    font-size: 2.0rem;
     font-variant: small-caps;
     color: var(--main-third-color);
   }
   .nav {
-    background-color: var(--main-first-color);
+    background-color: #4a39338a;
     backdrop-filter: blur(3px);
     color: var(--main-fourth-color);
     display: flex;
@@ -18,7 +18,7 @@
     gap: 2rem;
     padding: 0 1rem;
     
-    position: sticky;
+    position: fixed;
     z-index: 50;
     left: 0;
     top: 0;
@@ -34,6 +34,7 @@
     list-style: none;
     display: flex;
     gap: 1rem;
+    font-size: 1rem;
   }
   .nav li.active {
     
@@ -50,21 +51,19 @@
     /* padding: 0.25rem; */
   }
   .nav button {
-    background-color: #f6c70a;
-    width: 74px;
-    height: 74px;
-    border: 7px solid black;
-    outline: 3px solid var(--main-fourth-color);
+    background-color: #ffffff00;
+    border: none;
+    /* width: 54px; */
+    /* height: 54px; */
     font-size: 1rem;
-    color: black;
+    color: var(--main-fourth-color);
   }
   .nav button:hover {
-    background-color: var(--main-third-color);
+    color: var(--main-third-color);
   }
   .nav button:active {
-    border: 8px solid black;
-    font-size: 0.95rem;
+  
   }
   .logo {
-    width: 80px;
+    width: 40px;
   }

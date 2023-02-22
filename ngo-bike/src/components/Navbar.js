@@ -44,9 +44,10 @@ export default function Navbar() {
                     >Contact
                     </Link>
                 </li>
-
+                <li>
+                    <button>Donate</button>
+                </li>
             </ul>
-            <button>Donate</button>
         </nav>
     );
 };
