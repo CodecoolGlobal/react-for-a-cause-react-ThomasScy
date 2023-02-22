@@ -1,6 +1,6 @@
 import './App.css';
-import LandingPage from './Landing';
-import Navbar from './Navbar';
+import LandingPage from './components/Landing';
+import Navbar from './components/Navbar';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
 import Footer from './Footer';
