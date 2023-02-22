@@ -32,38 +32,24 @@ section {
   padding: 0;
 }
 
-#about-bubble-rotator-still {
+.about-bubble-rotator {
   margin: 0;
   padding: 0;
   width: 800px;
   height: 800px;
 }
 #about-bubble-rotator-quarter-rotation {
-  margin: 0;
-  padding: 0;
-  width: 800px;
-  height: 800px;
   animation: aboutAnimationCw 1s ease-in-out;
 }
 #about-bubble-rotator-half-rotation {
-  margin: 0;
-  padding: 0;
-  width: 800px;
-  height: 800px;
   animation: aboutAnimation2Cw 1s ease-in-out;
 }
 #about-bubble-rotator-quarter-rotation-ccw {
-  margin: 0;
-  padding: 0;
-  width: 800px;
-  height: 800px;
   animation: aboutAnimationCcw 1s ease-in-out;
 }
 
-
 .about-bubble {
   position: absolute;
-  /* display: inline-block; */
   text-align: center;
   margin: 0;
   padding: 0;
@@ -71,54 +57,18 @@ section {
   border-radius: 50%;
   height: 200px;
   width: 200px;
-  z-index: 4;
+  /* z-index: 4; */
   border: 2px solid black;
   box-shadow: 2px 5px 20px 5px black;
 }
 .about-bubble-rotation-quarter-ccw {
-  position: absolute;
-  /* display: inline-block; */
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background: var(--main-second-color);
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  z-index: 4;
   animation: aboutAnimationCcw 1s ease-in-out;
-  border: 2px solid black;
-  box-shadow: 2px 5px 20px 5px black;
 }
 .about-bubble-rotation-half-ccw {
-  position: absolute;
-  /* display: inline-block; */
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background: var(--main-second-color);
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  z-index: 4;
   animation: aboutAnimation2Ccw 1s ease-in-out;
-  border: 2px solid black;
-  box-shadow: 2px 5px 20px 5px black;
 }
 .about-bubble-rotation-quarter {
-  position: absolute;
-  /* display: inline-block; */
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background: var(--main-second-color);
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  z-index: 4;
   animation: aboutAnimationCw 1s ease-in-out;
-  border: 2px solid black;
-  box-shadow: 2px 5px 20px 5px black;
 }
 
 .footer {
