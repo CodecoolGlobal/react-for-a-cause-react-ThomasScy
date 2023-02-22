@@ -12,7 +12,7 @@ h2,
 h3 {
   font-family: marcellus;
 }
-li, a, button {
+li, a, button,p {
   font-family: manrope;
 }
 :root {
