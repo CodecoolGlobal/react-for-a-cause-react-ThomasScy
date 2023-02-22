@@ -1,29 +1,66 @@
 import React, {useState} from "react";
 
-    let rotations = null;
+let rotations = null;
 
 export default function AboutUs() {
-    const bubblePos1 = {left: 300, top: 0};
-    const bubblePos2 = {top: 300, right: 0};
-    const bubblePos3 = {left: 300, bottom: 0};
-    const bubblePos4 = {top: 300, left: 0};
+    const bubblePositions = [
+        {left: "300px", top: "0px"}, 
+        {left: "600px", top: "300px"},
+        {left: "300px", top: "600px"},
+        {left: "0px", top: "300px"}
+    ]
     
     const [infoRotation, setInfoRotation] = useState("about-bubble-rotator-still");
-    const [posBubble1, setPosBubble1] = useState(bubblePos1);
-    const [posBubble2, setPosBubble2] = useState(bubblePos2);
-    const [posBubble3, setPosBubble3] = useState(bubblePos3);
-    const [posBubble4, setPosBubble4] = useState(bubblePos4);
+    const [posBubble1, setPosBubble1] = useState(bubblePositions[0]);
+    const [posBubble2, setPosBubble2] = useState(bubblePositions[1]);
+    const [posBubble3, setPosBubble3] = useState(bubblePositions[2]);
+    const [posBubble4, setPosBubble4] = useState(bubblePositions[3]);
     const [bubbleRotation, setBubbleRotation] = useState("about-bubble");
 
+    console.log(posBubble1 === bubblePositions[0])
 
-    function handleBubbleClick() {
-        console.log("clicked")
+    function handleBubbleClick(id, position) {
         rotations += 1;
-        console.log(rotations);
+        position.left === "600px" ? rotateCcw() : 
+            position.top === "600px" ? rotateHalf() : 
+            position.left === "0px" ? rotateQuarter() :
+            setInfoRotation("about-bubble-rotator-still");
+
+        setTimeout(() => {
+            setInfoRotation("about-bubble-rotator-still");
+            setBubbleRotation("about-bubble");
+        }, 1000);
+    };
+    function rotateCcw() {
+        setInfoRotation("about-bubble-rotator-quarter-rotation-ccw");
+        setBubbleRotation("about-bubble-rotation-quarter");
+        setTimeout(() => updateBubblePosition(-1), 1000);
+    };
+    function rotateHalf() {
+        setInfoRotation("about-bubble-rotator-half-rotation");
+        setBubbleRotation("about-bubble-rotation-half-ccw");
+        setTimeout(() => updateBubblePosition(2), 1000);
+    };
+    function rotateQuarter() {
         setInfoRotation("about-bubble-rotator-quarter-rotation");
-        setBubbleRotation("about-bubble-rotation-ccw");
-        setTimeout(() => {setPosBubble1(bubblePos2); setPosBubble2(bubblePos3); setPosBubble3(bubblePos4); setPosBubble4(bubblePos1)}, 1000);
-        // setTimeout((setInfoRotation("about-bubble-rotator-still")))
+        setBubbleRotation("about-bubble-rotation-quarter-ccw");
+        setTimeout(() => updateBubblePosition(1), 1000);
+    };
+
+    function updateBubblePosition(posChange) {
+        const bubbleStateSetter = [setPosBubble1, setPosBubble2, setPosBubble3, setPosBubble4];
+        const currentBubblePosition = [posBubble1, posBubble2, posBubble3, posBubble4]
+        const newPositions = [1, 2, 3, 4].map(position => (
+            position + posChange === 5 ? 1 :
+            position + posChange === 6 ? 2 :
+            position + posChange === 0 ? 4 :
+            position + posChange
+        ));
+        let index = 0;
+        for (let setter of bubbleStateSetter) {
+            setter(currentBubblePosition[newPositions[index] - 1]);
+            index++;
+        };
     };
 
     return (
@@ -31,10 +68,10 @@ export default function AboutUs() {
             <div id="about-info-container">
                 <div id="about-info-textfield"></div>
                 <div id={infoRotation}>
-                    <div className={bubbleRotation} id="bubble1" onClick={e => handleBubbleClick(e.target)} style={posBubble1}>some text for testing purposes</div>
-                    <div className={bubbleRotation} id="bubble2" onClick={e => handleBubbleClick(e.target)} style={posBubble2}>2</div>
-                    <div className={bubbleRotation} id="bubble3" onClick={e => handleBubbleClick(e.target)} style={posBubble3}>3</div>
-                    <div className={bubbleRotation} id="bubble4" onClick={e => handleBubbleClick(e.target)} style={posBubble4}>4</div>
+                    <div className={bubbleRotation} id="bubble1" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble1}>some text for testing purposes</div>
+                    <div className={bubbleRotation} id="bubble2" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble2}>2</div>
+                    <div className={bubbleRotation} id="bubble3" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble3}>3</div>
+                    <div className={bubbleRotation} id="bubble4" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble4}>4</div>
                 </div>
             </div>
         </section>
