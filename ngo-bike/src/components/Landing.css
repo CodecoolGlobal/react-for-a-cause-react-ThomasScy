@@ -1,38 +1,83 @@
 .landing {
-  /* background-image: url("https://photography.bicyclingaroundtheworld.nl/wp-content/uploads/2019/01/africa-children-bicycle-water.jpg"); */
-  /* https://www.un.org/sites/un2.un.org/files/field/image/2022/06/wbr_healthcare3.jpg */
   background-color: var(--main-first-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
   background-attachment: scroll;
-  /* padding: 100px; */
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   position: relative;
-  height: 90vh;
+  height: 100vh;
+}
+.landing .slide-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.landing .text-container {
+  position: absolute;
+  text-align: left;
+  width: 40%;
+  height: min-content;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: left;
+  margin: 2rem;
+}
+.landing .one {
+  bottom: 60%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+.landing .two {
+  flex-direction: column;
+  left: 0%;
+  bottom: 10%;
+  width: 35% !important;
+}
+.two h1 {
+  color: var(--main-fourth-color) !important;
+}
+.landing .three {
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  width: 15% !important;
+  color: var(--main-fourth-color) !important;
+  text-align: center !important;
+}
+.three h1 {
+  color: var(--main-fourth-color) !important;
 }
 .landing h1 {
-  color: var(--main-third-color)
+  margin: 0;
+  padding: 0;
+  color: var(--main-third-color);
+  font-size: 4rem;
+  font-variant: small-caps;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 .landing h3 {
-  color: var(--main-fourth-color)
+  color: var(--main-fourth-color);
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 .landing p {
   color: var(--main-fourth-color)
 }
-
 .swiper {
   width: 100vw;
   height: 100vh;
 }
-
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
   background: var(--main-second-color);
 
   /* Center slide text vertically */
@@ -44,9 +89,7 @@
 .swiper-slide img {
   display: block;
   width: 100%;;
-  /* max-width: 1300px; */
   height: 100%;
-  /* max-height: 90vh; */
   object-fit: cover;
   position: center;
 }
@@ -58,6 +101,6 @@
 }
 .swiper-pagination-bullet {
   border-radius: 0%;
-  width: 30px;
-  height: 4px;
+  width: 2rem;
+  height: 0.25rem;
 }
