@@ -3,7 +3,7 @@ import LandingPage from './components/Landing';
 import Navbar from './components/Navbar';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
-import Footer from './Footer';
+import Footer from './components/Footer';
 
 function App() {
   return (
