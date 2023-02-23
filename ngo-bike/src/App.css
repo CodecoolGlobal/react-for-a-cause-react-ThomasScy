@@ -1,6 +1,6 @@
 .about {
   width: 100%;
-  background: var(--main-fourth-color);
+  background: white;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -287,4 +287,37 @@
   to {
     transform: rotate(30deg);
   }
+}
+
+/* Donate */
+
+.projects {
+  height: 100vh;
+  width: 100vw;
+  background: var(--main-fourth-color);
+  box-shadow: 0 0 10px black;
+}
+
+.all-project-container {
+  /* width: 80%; */
+  display: grid;
+  justify-content: end;
+  grid-template-columns: 1fr;
+  margin: 0;
+}
+
+.project-container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  align-self: center; */
+}
+
+.test {
+  width: 200px;
+  height: 200px;
+  background-image: url("../public/pix/projects/carfree.jpg");
 }

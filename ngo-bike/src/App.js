@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Donate from './components/Donate';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Navbar/>
         <div className="container"><LandingPage/></div>
         <AboutUs/>
+        <Projects/>
         <Contact id="contact"/>
         <Footer/>
       </div>

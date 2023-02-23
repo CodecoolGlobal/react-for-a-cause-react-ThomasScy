@@ -43,7 +43,8 @@ export default function LandingPage() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <Slide
-                        imgSrc={"https://www.un.org/sites/un2.un.org/files/field/image/2022/06/wbr_healthcare3.jpg"}
+                        // imgSrc={"https://www.un.org/sites/un2.un.org/files/field/image/2022/06/wbr_healthcare3.jpg"}
+                        imgSrc="../../public/pix/landing/landingpic2BW"
                         imgAlt={"lady bike"}
                         title={"The Challenge"}
                         text={"Transport is now done on foot, carrying cargo by head. Some distances to work or school take at least 2-3 hours. Using bikes instead saves daily productive time."}
