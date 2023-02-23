@@ -1,0 +1,8 @@
+#donate-section {
+    position: absolute;
+    left: 200px;
+    top: 500px;
+    width: 150px;
+    height: 150px;
+    background-color: palevioletred;
+}
