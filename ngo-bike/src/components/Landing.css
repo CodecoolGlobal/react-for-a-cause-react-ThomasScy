@@ -5,6 +5,7 @@
 
   position: relative;
   height: 100vh;
+  width: 100vw;
   z-index: 100;
 }
 .landing .slide-container {
@@ -15,41 +16,22 @@
 .landing .text-container {
   position: absolute;
   text-align: left;
-  width: 40%;
+  width: 100%;
   height: min-content;
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  align-items: left;
-  margin: 2rem;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  padding-inline: 3rem;
 }
 .landing .one {
-  bottom: 60%;
-  right: -15%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-}
-.landing .two {
-  flex-direction: column;
-  left: 0%;
-  bottom: 10%;
-  width: 35% !important;
-}
-.two h1 {
-  color: var(--main-fourth-color) !important;
-}
-.landing .three {
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  flex-direction: column;
-  width: 15% !important;
-  color: var(--main-fourth-color) !important;
-  text-align: center !important;
 }
-.three h1 {
-  color: var(--main-fourth-color) !important;
-}
+
 .landing h1 {
   margin: 0;
   padding: 0;
@@ -57,16 +39,15 @@
   font-size: 4rem;
   font-variant: small-caps;
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  text-align: center;
 }
-.landing h3 {
+.landing p {
   color: var(--main-fourth-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0;
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
-.landing p {
-  color: var(--main-fourth-color)
-}
+
 .swiper {
   width: 100vw;
   height: 100vh;
@@ -76,9 +57,9 @@
   background: var(--main-first-color);
 
   /* Center slide text vertically */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .swiper-slide img {
