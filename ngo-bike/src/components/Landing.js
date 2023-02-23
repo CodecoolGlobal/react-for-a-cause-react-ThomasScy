@@ -9,7 +9,10 @@ import "swiper/css/navigation";
 
 import './Landing.css';
 
+import ImageWaterBike from "./images/landingpic1.jpg";
 import ImageLadyBike from "./images/landingpic2BW.jpg";
+import ImageSchoolBike from "./images/landingpic3.webp";
+
 
 // import required modules
 import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
@@ -36,7 +39,7 @@ export default function LandingPage() {
             >
                 <SwiperSlide>
                     <Slide
-                        imgSrc={"https://photography.bicyclingaroundtheworld.nl/wp-content/uploads/2019/01/africa-children-bicycle-water.jpg"}
+                        imgSrc={ImageWaterBike}
                         imgAlt={"water bike"}
                         title={"Fabio"}
                         text={"The First African Bicycle Information Organization using bicycles as a tool for social transformation"}
@@ -45,8 +48,6 @@ export default function LandingPage() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <Slide
-                        // imgSrc={"https://www.un.org/sites/un2.un.org/files/field/image/2022/06/wbr_healthcare3.jpg"}
-                        // imgSrc={"../../public/pix/landing/landingpic2BW.jpg"}
                         imgSrc={ImageLadyBike}
                         imgAlt={"lady bike"}
                         title={"The Challenge"}
@@ -56,7 +57,7 @@ export default function LandingPage() {
                 </SwiperSlide>
                 <SwiperSlide>
                     <Slide
-                        imgSrc={"https://cdn.shopify.com/s/files/1/0266/8632/4820/articles/booomers-unicef_47_2048x.jpg?v=1574111150"}
+                        imgSrc={ImageSchoolBike}
                         imgAlt={"school bike"}
                         title={"The Change"}
                         text={"A Bicycle make a change. To get out of poverty, accessibility is one of the most important tools. FABIO is aiming to spread the idea of cycling for a better future."}
