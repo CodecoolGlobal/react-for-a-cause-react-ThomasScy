@@ -3,14 +3,31 @@ import './Contact.css';
 
 export default function Contact() {
   const [data, setData] = useState({})
+
   const handleInput = (input) => {
+    const newData = { ...data };
+    const userInput = input.target.value.trim();
     if (input.target.value.length > 0) {
+      if (input.target.id === "first-name") {
+        newData.firstName = userInput;
+      } else if (input.target.id === "last-name") {
+        newData.lastName = userInput;
+      } else if (input.target.id === "email") {
+        newData.email = userInput;
+      } else if (input.target.id === "subject") {
+        newData.subject = userInput;
+      } else if (input.target.id === "message") {
+        newData.message = userInput;
+      }
+      setData(newData)
+    }
+  }
+
+  const sendContact = (e) => {
+    e.preventDefault();
+    if (e.target.id === "sendBtn") {
       console.log(data);
 
-      const newData = {...data};
-      newData.firstName = input.target.value;
-      setData(newData)
-      console.log(newData);
     }
   }
 
@@ -20,12 +37,12 @@ export default function Contact() {
       <hr></hr>
       <h1>Contact Us</h1>
       <form className='contact-form'>
-        <input type="text" placeholder="First name" onChange={handleInput} />
-        <input type="text" placeholder="Last name" onChange={handleInput} />
-        <input type="email" placeholder="Email" onChange={handleInput} />
-        <input type="text" placeholder="Subject" onChange={handleInput} />
-        <input type="text" placeholder="Message" onChange={handleInput} />
-        <button>Send</button>
+        <input id="first-name" type="text" placeholder="First name" onChange={handleInput} />
+        <input id="last-name" type="text" placeholder="Last name" onChange={handleInput} />
+        <input id="email" type="email" placeholder="Email" onChange={handleInput} />
+        <input id="subject" type="text" placeholder="Subject" onChange={handleInput} />
+        <input id="message" type="text" placeholder="Message" onChange={handleInput} />
+        <button id="sendBtn" type="button" onClick={sendContact}>Send</button>
       </form>
 
     </section>

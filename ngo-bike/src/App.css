@@ -123,17 +123,6 @@ section {
   background-size: 60%;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #18191a;
-  color: white;
-  height: 50px;
-  margin: 0;
-}
-
 @keyframes aboutAnimationCw {
   to {
       transform: rotate(0.25turn);
