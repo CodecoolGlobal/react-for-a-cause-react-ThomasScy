@@ -87,7 +87,7 @@ export default function LandingPage() {
                         imgSrc={ImageSchoolBike}
                         imgAlt={"school bike"}
                         title={""}
-                        text={"Riding a bicycle makes a change. To get out of poverty, accessibility is one of the most important tools. FABIO is aiming to spread the idea of cycling for a better future. We are thankful for every kind of support."}
+                        text={"Riding a bicycle makes a change. To get out of poverty, accessibility is one of the most important tools. FABIO is aiming to spread the idea of cycling for a better future. Therefore we are thankful for every kind of support."}
                         classString={"one"}
                     />
                 </SwiperSlide>

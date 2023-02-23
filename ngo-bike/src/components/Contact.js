@@ -24,6 +24,8 @@ export default function Contact() {
         newData.message = userInput;
       }
       setData(newData)
+
+      document.querySelector("#contact").scrollIntoView({ behavior: "smooth"});
     }
   }
 
@@ -48,7 +50,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact">
-      <h1>Contact Us</h1>
+      <h1>Contact us</h1>
+      <p>Fill out the contact form to get in touch with us.</p>
 
       {displayForm && (
         <form className='contact-form'>
