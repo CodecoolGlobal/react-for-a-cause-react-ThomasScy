@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Donate from './components/Donate';
 import ScrollButton from './components/scrollBtn';
 
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Navbar/>
         <div className="container"><LandingPage/></div>
         <AboutUs/>
+        <Projects/>
         <Contact id="contact"/>
         <Footer/>
       </div>
