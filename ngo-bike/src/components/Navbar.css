@@ -9,7 +9,7 @@
     color: var(--main-third-color);
   }
   .nav {
-    background-color: #4a39338a;
+    background-color: var(--main-first-color);
     backdrop-filter: blur(3px);
     color: var(--main-fourth-color);
     display: flex;

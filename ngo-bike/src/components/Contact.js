@@ -39,7 +39,6 @@ export default function Contact() {
 
   return (
     <section className="contact">
-      <hr></hr>
       <h1>Contact Us</h1>
 
       {displayForm && (
@@ -48,7 +47,7 @@ export default function Contact() {
           <input id="last-name" type="text" placeholder="Last name" onChange={handleInput} />
           <input id="email" type="email" placeholder="Email" onChange={handleInput} />
           <input id="subject" type="text" placeholder="Subject" onChange={handleInput} />
-          <input id="message" type="text" placeholder="Message" onChange={handleInput} />
+          <textarea id="message" type="text" placeholder="Message" onChange={handleInput} />
           <button id="sendBtn" type="button" onClick={sendContact}>Send</button>
         </form>
       )}

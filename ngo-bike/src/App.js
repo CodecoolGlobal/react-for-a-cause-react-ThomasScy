@@ -5,6 +5,8 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Donate from './components/Donate';
+import ScrollButton from './components/scrollBtn';
+
 import Projects from './components/Projects';
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Contact id="contact"/>
         <Footer/>
       </div>
+      <ScrollButton/>
     </>
   );
 }
