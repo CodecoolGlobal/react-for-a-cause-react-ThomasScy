@@ -20,6 +20,9 @@ export default function Donate() {
 
     donateDivClass === "donate-div-donation3" && turnBikerLeft();
     donateDivClass === "donate-div-donation6" && turnBikerRight();
+    document.body.style.overflowY = donateDivClass === "donate-div-donation2" || donateDivClass === "donate-div-donation5" ? "hidden" : "";
+
+
 
     function handleClick() {
         console.log("clicked")
