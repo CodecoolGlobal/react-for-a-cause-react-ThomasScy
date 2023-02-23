@@ -15,8 +15,8 @@
     margin-bottom: 4rem;
 
     font-size: 4rem;
-    color: var(--main-first-color);
-    text-shadow: 2px 2px 1px var(--main-fourth-color);
+    color: var(--main-third-color);
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
 .contact .contact-form {
