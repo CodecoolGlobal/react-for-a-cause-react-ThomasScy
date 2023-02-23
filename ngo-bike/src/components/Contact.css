@@ -1,16 +1,18 @@
 .contact {
-    position: relative;
-    
+    background-image: url("https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-6/320909634_874043863788313_983032976872676637_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=QyYHYW4ZHpEAX9E7e_0&_nc_ht=scontent-vie1-1.xx&oh=00_AfAGDQaUIgi0asHzuU7aHgGhem-wjEgVO224CcVq2Mx6YQ&oe=63FC1A05") ;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+}
+.contact h1 {
+    font-size: 4rem;
+    color: var(--main-fourth-color);
+    text-shadow: 1px 1px 2px var(--main-first-color);
 }
 .contact .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 .contact input {
     width: 20rem

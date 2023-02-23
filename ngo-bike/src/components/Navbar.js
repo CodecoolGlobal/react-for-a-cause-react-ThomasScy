@@ -28,7 +28,7 @@ export default function Navbar() {
                         to="about"
                         spy={true}
                         smooth={true}
-                        offset={-100}
+                        offset={0}
                         duration={scrollDurationMs}
                     >About Us
                     </Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
                         to="contact"
                         spy={true}
                         smooth={true}
-                        offset={-100}
+                        offset={0}
                         duration={scrollDurationMs}
                     >Contact
                     </Link>
