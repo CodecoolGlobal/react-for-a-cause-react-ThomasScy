@@ -6,7 +6,7 @@ export default function Contact() {
   const [displayForm, setDisplayForm] = useState(true)
   const [displayThx, setDisplayThx] = useState(false)
 
-
+  let dataJson = null;
 
   const handleInput = (input) => {
     const newData = { ...data };
@@ -29,16 +29,25 @@ export default function Contact() {
 
   const sendContact = (e) => {
     e.preventDefault();
+    dataJson = JSON.stringify(data);
+
     if (e.target.id === "sendBtn") {
       console.log(data);
       setDisplayForm(false);
       setDisplayThx(true);
+
+      const timeOutMs = 5000;
+      setTimeout(() => {
+        setDisplayForm(true);
+        setDisplayThx(false);;
+      }, timeOutMs)
+
     }
   }
 
 
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <h1>Contact Us</h1>
 
       {displayForm && (

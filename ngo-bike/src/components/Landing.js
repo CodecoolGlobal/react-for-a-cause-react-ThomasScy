@@ -24,10 +24,10 @@ export default function LandingPage() {
                 spaceBetween={0}
                 effect={"fade"}
                 centeredSlides={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
+                // autoplay={{
+                //     delay: 5000,
+                //     disableOnInteraction: false,
+                // }}
                 speed={3000}
                 pagination={{
                     clickable: true,
@@ -42,7 +42,16 @@ export default function LandingPage() {
                         imgSrc={ImageWaterBike}
                         imgAlt={"water bike"}
                         title={"Fabio"}
-                        text={"The First African Bicycle Information Organization using bicycles as a tool for social transformation"}
+                        text={"Who we are and what we stand for..."}
+                        classString={"one"}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Slide
+                        imgSrc={ImageWaterBike}
+                        imgAlt={"water bike"}
+                        title={""}
+                        text={"We are 'The First African Bicycle Information Organization' using bicycles as a tool for social transformation."}
                         classString={"one"}
                     />
                 </SwiperSlide>
@@ -50,18 +59,36 @@ export default function LandingPage() {
                     <Slide
                         imgSrc={ImageLadyBike}
                         imgAlt={"lady bike"}
-                        title={"The Challenge"}
-                        text={"Transport is now done on foot, carrying cargo by head. Some distances to work or school take at least 2-3 hours. Using bikes instead saves daily productive time."}
-                        classString={"two"}
+                        title={"Our Motivation"}
+                        text={"is based on daily challenges..."}
+                        classString={"one"}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Slide
+                        imgSrc={ImageLadyBike}
+                        imgAlt={"lady bike"}
+                        title={""}
+                        text={"Some of the challenges are that transport routes are still done on foot while carrying cargo by head. Distances to work or school can take up to 2-3 hours. Using bikes instead saves daily productive time and increases live quality for each individual."}
+                        classString={"one"}
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <Slide
                         imgSrc={ImageSchoolBike}
                         imgAlt={"school bike"}
-                        title={"The Change"}
-                        text={"A Bicycle make a change. To get out of poverty, accessibility is one of the most important tools. FABIO is aiming to spread the idea of cycling for a better future."}
-                        classString={"three"}
+                        title={"Our Future"}
+                        text={"Developing our common future means changing old habits..."}
+                        classString={"one"}
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Slide
+                        imgSrc={ImageSchoolBike}
+                        imgAlt={"school bike"}
+                        title={""}
+                        text={"Riding a bicycle makes a change. To get out of poverty, accessibility is one of the most important tools. FABIO is aiming to spread the idea of cycling for a better future. We are thankful for every kind of support."}
+                        classString={"one"}
                     />
                 </SwiperSlide>
             </Swiper>
@@ -70,14 +97,13 @@ export default function LandingPage() {
 };
 
 function Slide({ imgSrc, imgAlt, title, text, classString }) {
-    console.log(imgAlt)
     return (
 
         <div className="slide-container">
             <img className="swiper-slide img" src={imgSrc} alt={imgAlt}></img>
             <div className={`text-container ${classString}`}>
                 <h1>{title}</h1>
-                <h3>{text}</h3>
+                <p>{text}</p>
             </div>
         </div>
 

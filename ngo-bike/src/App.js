@@ -21,7 +21,7 @@ function App() {
         <div className="container"><LandingPage/></div>
         <AboutUs/>
         <Projects/>
-        <Contact id="contact"/>
+        <Contact/>
         <Footer/>
       </div>
     </>

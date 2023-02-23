@@ -8,6 +8,7 @@
   width: 100vw;
   /* border-bottom: px solid var(--main-first-color); */
   box-shadow: 0 0 10px black;
+  background-color: var(--main-first-color);
 }
 
 #about-info-container {
@@ -316,6 +317,8 @@
   width: 100vw;
   background: rgb(141, 141, 141);
   box-shadow: 0 0 10px black;
+  color: var(--main-fourth-color);
+
 }
 
 .all-projects-container {
@@ -339,6 +342,7 @@
   padding: 0;
   /* display: flex;
   align-self: center; */
+
 }
 
 .test {
