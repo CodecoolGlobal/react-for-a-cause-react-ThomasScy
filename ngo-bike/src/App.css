@@ -25,11 +25,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--main-third-color);
+  background: rgb(225, 223, 223);
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  border: 4px solid var(--main-first-color);
+  border: 4px solid black;
   box-shadow: 2px 5px 20px 5px black;
   margin: 0;
   padding: 0;
@@ -77,17 +77,33 @@
 
 .about-bubble {
   position: absolute;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   margin: 0;
   padding: 0;
-  background: var(--main-second-color);
+  background: rgb(141, 141, 141);
   border-radius: 50%;
   height: 200px;
   width: 200px;
-  /* z-index: 4; */
   border: 2px solid black;
   box-shadow: 2px 5px 20px 5px black;
 }
+.about-bubble h3 {
+  color: red;
+  font-size: 1.7rem;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px black;
+  text-shadow: 0 0 4px black;
+  visibility: hidden;
+}
+.about-bubble:hover {
+  background: rgb(181, 181, 181);
+}
+.about-bubble:hover h3 {
+  visibility: visible;
+}
+
 .about-bubble-rotation-quarter-ccw {
   animation: aboutAnimationCcw 1s ease-in-out;
 }
@@ -99,28 +115,25 @@
 }
 
 #bubble1 {
-  background-image: url("../public/pix/mission_neu.png");
+  background-image: url("../public/pix/mission_wh.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.about-bubble {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 60%;
 }
 #bubble2 {
-  background-image: url("../public/pix/team.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
+  background-image: url("../public/pix/team_wh.png");
 }
 #bubble3 {
-  background-image: url("../public/pix/values.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
+  background-image: url("../public/pix/values_wh.png");
 }
 #bubble4 {
-  background-image: url("../public/pix/vision.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
+  background-image: url("../public/pix/vision_wh.png");
 }
 
 @keyframes aboutAnimationCw {

@@ -63,7 +63,16 @@ export default function Projects() {
     <div className="projects">
         <h1>Projects!</h1>
         <div className="all-projects-container">
-            {projetDivs}
+            {/* {projetDivs} */}
+            <div className={`project-container`}>
+                <div className="project-pic" style={{ backgroundImage: `url(${projects[0].pic})`}}>
+                    <p>{projects[0].name}</p>
+                </div>
+                <div className="project-text-container">
+                    <div className="project-text">{projects[0].summary}</div>
+                    <div className="read-more" onClick={() => handleReadMoreClick(projects[0].id)}>Read more</div>
+                </div>
+            </div>
         </div>
     </div>
  )   
