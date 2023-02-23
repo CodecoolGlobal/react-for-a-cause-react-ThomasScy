@@ -47,7 +47,7 @@ export default function Contact() {
 
 
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <h1>Contact Us</h1>
 
       {displayForm && (
