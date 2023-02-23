@@ -9,6 +9,8 @@ import "swiper/css/navigation";
 
 import './Landing.css';
 
+import ImageLadyBike from "./images/landingpic2BW.jpg";
+
 // import required modules
 import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
 
@@ -44,7 +46,8 @@ export default function LandingPage() {
                 <SwiperSlide>
                     <Slide
                         // imgSrc={"https://www.un.org/sites/un2.un.org/files/field/image/2022/06/wbr_healthcare3.jpg"}
-                        imgSrc="../../public/pix/landing/landingpic2BW"
+                        // imgSrc={"../../public/pix/landing/landingpic2BW.jpg"}
+                        imgSrc={ImageLadyBike}
                         imgAlt={"lady bike"}
                         title={"The Challenge"}
                         text={"Transport is now done on foot, carrying cargo by head. Some distances to work or school take at least 2-3 hours. Using bikes instead saves daily productive time."}
