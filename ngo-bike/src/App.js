@@ -2,8 +2,8 @@ import './App.css';
 import LandingPage from './components/Landing';
 import Navbar from './components/Navbar';
 import AboutUs from './components/AboutUs';
-import Contact from './Contact';
-import Footer from './Footer';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Donate from './components/Donate';
 
 function App() {
