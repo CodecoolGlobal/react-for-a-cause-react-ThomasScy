@@ -1,13 +1,13 @@
-section {
-  background: var(--main-fourth-color);
-  height: 100vh;
-}
-
 .about {
   width: 100%;
+  background: var(--main-fourth-color);
   display: grid;
   justify-items: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* border-bottom: px solid var(--main-first-color); */
+  box-shadow: 0 0 10px black;
 }
 
 #about-info-container {
