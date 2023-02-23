@@ -1,0 +1,47 @@
+.footer {
+    width: 100%;
+    background-color: var(--main-first-color);
+    color: var(--main-fourth-color);
+    padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .social-media-box {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.75rem;
+}
+
+.footer svg {
+    fill: var(--main-fourth-color);
+    margin: 0;
+}
+
+.footer svg:hover {
+    fill: var(--main-third-color);
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.footer a:hover {
+    color: var(--main-third-color);
+}
+
+.footer a>svg:hover {
+    fill: var(--main-third-color);
+
+}
+
+.footer .copyright {
+    margin-top: 0.75rem;
+}

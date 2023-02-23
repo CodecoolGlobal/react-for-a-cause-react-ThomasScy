@@ -2,6 +2,7 @@
   font-family: manrope;
   src: url(fonts/Manrope/Manrope-VariableFont_wght.ttf);
 }
+
 @font-face {
   font-family: marcellus;
   src: url(fonts/Marcellus/Marcellus-Regular.ttf);
@@ -12,9 +13,14 @@ h2,
 h3 {
   font-family: marcellus;
 }
-li, a, button,p {
+
+li,
+a,
+button,
+p {
   font-family: manrope;
 }
+
 :root {
   /* https://palettes.shecodes.io/palettes/195 */
   --main-first-color: #4A3933;
@@ -23,7 +29,7 @@ li, a, button,p {
   --main-fourth-color: #E6D5B8;
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   scrollbar-color: var(--main-third-color)
