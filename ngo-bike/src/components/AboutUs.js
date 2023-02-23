@@ -2,10 +2,6 @@ import React, {useState} from "react";
 
 export default function AboutUs() {
 
-    let name = "test"
-    let neu = "name"
-    console.log(eval(neu))
-
     const infos = [
         {
             id: 1,
@@ -51,10 +47,17 @@ export default function AboutUs() {
     const [posBubble3, setPosBubble3] = useState(bubblePositions[2]);
     const [posBubble4, setPosBubble4] = useState(bubblePositions[3]);
     const [bubbleRotation, setBubbleRotation] = useState("");
+    const [bubble1ActivityStatus, setBubble1ActivityStatus] = useState("bubble1-active");
+    const [bubble2ActivityStatus, setBubble2ActivityStatus] = useState("bubble2");
+    const [bubble3ActivityStatus, setBubble3ActivityStatus] = useState("bubble3");
+    const [bubble4ActivityStatus, setBubble4ActivityStatus] = useState("bubble4");
     const [infoText, setInfoText] = useState(infos[0].text)
     const [textFading, setTextFAding] = useState("");
+
     
-    console.log(posBubble1 === bubblePositions[0]);
+    // let activeBubble = [posBubble1, posBubble2, posBubble3, posBubble4].filter(bubble => bubble.left === bubblePositions[0].left && bubble.top === bubblePositions[0].top);
+    // console.log(activeBubble)
+
     
     const infoDivsArr = infos.map(info => {
         const bubble = info.id === 1 ? posBubble1 : 
@@ -64,7 +67,7 @@ export default function AboutUs() {
         return (
                 <div 
                     className={`${bubbleRotation} about-bubble`} 
-                    id={`bubble${info.id}`} 
+                    id={eval(`bubble${info.id}ActivityStatus`)} 
                     onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} 
                     style={myStyle}>
                 <h3>{info.name}</h3>
@@ -81,6 +84,7 @@ export default function AboutUs() {
         setTimeout(() => {
             setInfoRotation("");
             setBubbleRotation("");
+            setBubbleActivityStatus();
         }, 1000);
     };
     function rotateCcw(id) {
@@ -126,6 +130,25 @@ export default function AboutUs() {
         };
     };
 
+    function setBubbleActivityStatus() {
+        posBubble1.left === bubblePositions[1].left && 
+            posBubble1.top === bubblePositions[1].top ? 
+            setBubble1ActivityStatus("bubble1-active") : 
+            setBubble1ActivityStatus("bubble1");
+        posBubble2.left === bubblePositions[1].left && 
+            posBubble2.top === bubblePositions[1].top ? 
+            setBubble2ActivityStatus("bubble2-active") : 
+            setBubble2ActivityStatus("bubble2");
+        posBubble3.left === bubblePositions[1].left && 
+            posBubble3.top === bubblePositions[1].top ? 
+            setBubble3ActivityStatus("bubble3-active") : 
+            setBubble3ActivityStatus("bubble3");
+        posBubble4.left === bubblePositions[1].left && 
+            posBubble4.top === bubblePositions[1].top ? 
+            setBubble4ActivityStatus("bubble4-active") : 
+            setBubble4ActivityStatus("bubble4");
+    }
+
     return (
         <section id="about" className="about">
             <div id="about-info-container">
@@ -133,10 +156,6 @@ export default function AboutUs() {
                     <div id="about-info-text" className={textFading}><p>{infoText}</p></div>
                 </div>
                 <div id={infoRotation} className="about-bubble-rotator">
-                    {/* <div className={`${bubbleRotation} about-bubble`} id="bubble1" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble1}></div> */}
-                    {/* <div className={`${bubbleRotation} about-bubble`} id="bubble2" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble2}></div> */}
-                    {/* <div className={`${bubbleRotation} about-bubble`} id="bubble3" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble3}></div> */}
-                    {/* <div className={`${bubbleRotation} about-bubble`} id="bubble4" onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} style={posBubble4}></div> */}
                     {infoDivsArr}
                 </div>
             </div>

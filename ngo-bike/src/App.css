@@ -88,6 +88,9 @@
   width: 200px;
   border: 2px solid black;
   box-shadow: 2px 5px 20px 5px black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
 }
 .about-bubble h3 {
   color: red;
@@ -97,12 +100,12 @@
   text-shadow: 0 0 4px black;
   visibility: hidden;
 }
-.about-bubble:hover {
+/* .about-bubble:hover {
   background: rgb(181, 181, 181);
 }
 .about-bubble:hover h3 {
   visibility: visible;
-}
+} */
 
 .about-bubble-rotation-quarter-ccw {
   animation: aboutAnimationCcw 1s ease-in-out;
@@ -116,24 +119,27 @@
 
 #bubble1 {
   background-image: url("../public/pix/mission_wh.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
 }
-
-.about-bubble {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
+#bubble1-active {
+  background-image: url("../public/pix/mission_gr.png");
 }
 #bubble2 {
   background-image: url("../public/pix/team_wh.png");
 }
+#bubble2-active {
+  background-image: url("../public/pix/team_gr.png");
+}
 #bubble3 {
   background-image: url("../public/pix/values_wh.png");
 }
+#bubble3-active {
+  background-image: url("../public/pix/values_gr.png");
+}
 #bubble4 {
   background-image: url("../public/pix/vision_wh.png");
+}
+#bubble4-active {
+  background-image: url("../public/pix/vision_gr.png");
 }
 
 @keyframes aboutAnimationCw {
@@ -305,18 +311,24 @@
 /* Donate */
 
 .projects {
+  position: relative;
   height: 100vh;
   width: 100vw;
-  background: var(--main-fourth-color);
+  background: rgb(141, 141, 141);
   box-shadow: 0 0 10px black;
 }
 
-.all-project-container {
-  /* width: 80%; */
+.all-projects-container {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 80%;
   display: grid;
   justify-content: end;
   grid-template-columns: 1fr;
   margin: 0;
+  border: 2px solid black;
+  z-index: 100;
 }
 
 .project-container {

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+// import projectPic from "./carfree.jpg";
+
 export default function Projects() {
 
     const projects = [
@@ -8,7 +10,7 @@ export default function Projects() {
             name: "Car Free Day",
             summary: "",
             text: "a",
-            pic: "../public/pix/projects/carfree.jpg",
+            pic: "./components/images/carfree.jpg",
         },
         {
             id: 2,
@@ -43,8 +45,8 @@ export default function Projects() {
     const projetDivs = projects.map(project => {
         return (
             <div className={`project-container`}>
-                <div className="project-pic" style={{ backgroundImage: `url(${project.pic})`}}>
-                    <p>{project.name}</p>
+                <div className="project-pic">
+                    <img src={"./components/images/carfree.jpg"}></img>
                 </div>
                 <div className="project-text-container">
                     <div className="project-text">{project.summary}</div>
@@ -60,12 +62,12 @@ export default function Projects() {
 
 
  return (
-    <div className="projects">
+    <section className="projects">
         <h1>Projects!</h1>
         <div className="all-projects-container">
             {/* {projetDivs} */}
             <div className={`project-container`}>
-                <div className="project-pic" style={{ backgroundImage: `url(${projects[0].pic})`}}>
+                <div className="project-pic" style={{ backgroundImage: `url("./carfree.jpg")`}}>
                     <p>{projects[0].name}</p>
                 </div>
                 <div className="project-text-container">
@@ -74,6 +76,6 @@ export default function Projects() {
                 </div>
             </div>
         </div>
-    </div>
+    </section>
  )   
 }
