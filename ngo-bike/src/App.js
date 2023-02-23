@@ -5,7 +5,7 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Donate from './components/Donate';
-import ScrollButton from './components/scrollBtn';
+import UpButton from './components/UpBtn';
 
 import Projects from './components/Projects';
 
@@ -15,6 +15,7 @@ function App() {
       <div id="donate-root">
         <Donate/>
       </div>
+      <UpButton/>
       <div>
         <Navbar/>
         <div className="container"><LandingPage/></div>
@@ -23,7 +24,6 @@ function App() {
         <Contact id="contact"/>
         <Footer/>
       </div>
-      <ScrollButton/>
     </>
   );
 }

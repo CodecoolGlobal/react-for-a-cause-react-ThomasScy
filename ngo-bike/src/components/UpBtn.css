@@ -1,0 +1,22 @@
+.up-button {
+    position: relative;
+}
+.up-button button {
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    border: none;
+    padding: 0;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 5;
+}
+.up-button button:hover {
+   fill: var(--main-third-color)
+}
+.up-button svg {
+    fill: var(--main-fourth-color);
+
+}
+.up-button svg:hover {
+    fill: var(--main-third-color)
+ }
