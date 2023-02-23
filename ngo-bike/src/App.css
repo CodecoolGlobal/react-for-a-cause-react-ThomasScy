@@ -170,7 +170,7 @@ section {
   position: fixed;
   /* height: 100vh;
   width: 100vw; */
-  z-index: 99;
+  z-index: 1;
 }
 
 .donate-div {
@@ -236,7 +236,6 @@ section {
   display: inline-block;
   position: absolute;
   left: 1000;
-  z-index: 99;
   width: 100px;
   height: 500px;
 }
@@ -267,7 +266,6 @@ section {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  z-index: 50;
 }
 
 .donate-button-right {
