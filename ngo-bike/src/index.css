@@ -17,7 +17,9 @@ h3 {
 li,
 a,
 button,
-p {
+p,
+input,
+textarea {
   font-family: manrope;
 }
 
