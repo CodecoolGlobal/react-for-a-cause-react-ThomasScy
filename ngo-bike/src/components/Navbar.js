@@ -36,6 +36,17 @@ export default function Navbar() {
                 <li>
                     <Link
                         activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={scrollDurationMs}
+                    >Projects
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
                         to="contact"
                         spy={true}
                         smooth={true}
