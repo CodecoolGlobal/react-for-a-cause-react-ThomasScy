@@ -23,12 +23,19 @@ textarea {
   font-family: manrope;
 }
 
-:root {
-  /* https://palettes.shecodes.io/palettes/195 */
+/* :root {
+  https://palettes.shecodes.io/palettes/195
   --main-first-color: #4A3933;
   --main-second-color: #F0A500;
   --main-third-color: #87b026;
   --main-fourth-color: #E6D5B8;
+} */
+:root {
+  /* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
+  --main-first-color: #1A120B;
+  --main-second-color: #3C2A21;
+  --main-third-color: #87b026;
+  --main-fourth-color: #E5E5CB;
 }
 
 * {

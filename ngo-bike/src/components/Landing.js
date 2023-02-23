@@ -70,7 +70,6 @@ export default function LandingPage() {
 };
 
 function Slide({ imgSrc, imgAlt, title, text, classString }) {
-    console.log(imgAlt)
     return (
 
         <div className="slide-container">

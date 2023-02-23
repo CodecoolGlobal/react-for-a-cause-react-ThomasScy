@@ -8,6 +8,7 @@
   width: 100vw;
   /* border-bottom: px solid var(--main-first-color); */
   box-shadow: 0 0 10px black;
+  background-color: var(--main-first-color);
 }
 
 #about-info-container {
@@ -25,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--main-third-color);
+  background: var(--main-fourth-color);
   width: 600px;
   height: 600px;
   border-radius: 50%;
@@ -80,7 +81,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  background: var(--main-second-color);
+  background: var(--main-third-color);
   border-radius: 50%;
   height: 200px;
   width: 200px;
@@ -294,8 +295,10 @@
 .projects {
   height: 100vh;
   width: 100vw;
-  background: var(--main-fourth-color);
+  background: var(--main-first-color);
   box-shadow: 0 0 10px black;
+  color: var(--main-fourth-color);
+
 }
 
 .all-project-container {
@@ -314,6 +317,7 @@
   padding: 0;
   /* display: flex;
   align-self: center; */
+
 }
 
 .test {
