@@ -69,8 +69,9 @@ export default function AboutUs() {
                     className={`${bubbleRotation} about-bubble`} 
                     id={eval(`bubble${info.id}ActivityStatus`)} 
                     onClick={e => handleBubbleClick(e.target.id.split("")[6], e.target.style)} 
-                    style={myStyle}>
-                <h3>{info.name}</h3>
+                    style={myStyle}
+                >
+                    <h3>{info.name}</h3>
                 </div>
                 )
     });
@@ -131,20 +132,20 @@ export default function AboutUs() {
     };
 
     function setBubbleActivityStatus() {
-        posBubble1.left === bubblePositions[1].left && 
-            posBubble1.top === bubblePositions[1].top ? 
+        posBubble1.left === bubblePositions[0].left && 
+            posBubble1.top === bubblePositions[0].top ? 
             setBubble1ActivityStatus("bubble1-active") : 
             setBubble1ActivityStatus("bubble1");
-        posBubble2.left === bubblePositions[1].left && 
-            posBubble2.top === bubblePositions[1].top ? 
+        posBubble2.left === bubblePositions[0].left && 
+            posBubble2.top === bubblePositions[0].top ? 
             setBubble2ActivityStatus("bubble2-active") : 
             setBubble2ActivityStatus("bubble2");
-        posBubble3.left === bubblePositions[1].left && 
-            posBubble3.top === bubblePositions[1].top ? 
+        posBubble3.left === bubblePositions[0].left && 
+            posBubble3.top === bubblePositions[0].top ? 
             setBubble3ActivityStatus("bubble3-active") : 
             setBubble3ActivityStatus("bubble3");
-        posBubble4.left === bubblePositions[1].left && 
-            posBubble4.top === bubblePositions[1].top ? 
+        posBubble4.left === bubblePositions[0].left && 
+            posBubble4.top === bubblePositions[0].top ? 
             setBubble4ActivityStatus("bubble4-active") : 
             setBubble4ActivityStatus("bubble4");
     }

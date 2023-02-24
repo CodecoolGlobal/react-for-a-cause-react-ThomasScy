@@ -83,7 +83,7 @@
   justify-content: center;  
   margin: 0;
   padding: 0;
-  background: rgb(141, 141, 141);
+  background-color: rgb(121, 121, 121);
   border-radius: 50%;
   height: 200px;
   width: 200px;
@@ -94,19 +94,23 @@
   background-size: 60%;
 }
 .about-bubble h3 {
+  pointer-events: none;
+  padding: 4px;
   color: red;
+  background-color: rgba(179, 168, 168, 0.8);
   font-size: 1.7rem;
-  font-weight: bold;
-  -webkit-text-stroke: 0.5px black;
+  font-weight: 700;
+  /* font-weight: bold; */
+  -webkit-text-stroke: 0.7px black;
   text-shadow: 0 0 4px black;
   visibility: hidden;
 }
-/* .about-bubble:hover {
-  background: rgb(181, 181, 181);
+.about-bubble:hover {
+  background-color: rgb(196, 196, 196);
 }
 .about-bubble:hover h3 {
   visibility: visible;
-} */
+}
 
 .about-bubble-rotation-quarter-ccw {
   animation: aboutAnimationCcw 1s ease-in-out;
@@ -177,17 +181,12 @@
 
 #donate-root {
   position: fixed;
-  /* height: 100vh;
-  width: 100vw; */
   z-index: 1;
 }
 
 .donate-div {
   position: absolute;
-  /* display: grid;  */
-  /* grid-template-columns: auto auto; */
   z-index: 50;
-  /* animation: donateAnimation 0.5s infinite; */
   transition: 1s linear;
   width: 1100px;
   height: 503px;
@@ -220,26 +219,13 @@
 
 .donate-options-container {
   display: inline-block;
-  border: 4px solid black;
+  border: 4px solid var(--main-third-color);
   box-shadow: 0px 0px 10px black;
   width: 1000px;
   height: 500px;
   background: white;
   z-index: 5;
-  /* left: 0;
-  top: 0; */
 }
-/* .donate-options-hidden {
-  display: none
-} */
-
-/* .donation-button-root {
-  display: inline-block;
-  height: 500px;
-  width: 100px;
-  /* display: grid;
-  align-items: center; 
-} */
 
 .donate-button-root {
   display: inline-block;
@@ -269,7 +255,7 @@
   font-weight: bold;
   color: red;
   text-align: center;
-  border: 4px solid black;
+  border: 2px solid var(--main-third-color);
   box-shadow: 0px 0px 10px black;
   background-size: 100%;
   border-radius: 50%;
@@ -278,10 +264,10 @@
 }
 
 .donate-button-right {
-  background-image: url("../public/pix/biker.png");
+  background-image: url("../public/pix/biker_right.png");
 }
 .donate-button-left {
-  background-image: url("../public/pix/biker2.png");
+  background-image: url("../public/pix/biker_left.png");
 }
 .donate-button-animation-right {
   animation: bikerAnimationRight 1s alternate;
