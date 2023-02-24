@@ -1,4 +1,5 @@
 .about {
+  position: relative;
   width: 100%;
   background: white;
   display: grid;
@@ -9,6 +10,18 @@
   /* border-bottom: px solid var(--main-first-color); */
   box-shadow: 0 0 10px black;
   background-color: var(--main-first-color);
+}
+
+.about h1 {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  z-index: 20;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: 4rem;
+  color:  rgb(225, 223, 223);
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
 #about-info-container {
@@ -216,6 +229,14 @@
   left: -1130px;
   top: calc(50vh - 250px);
 }
+.donate-div-donation7 {
+  left: calc(100vw + 1250px);
+  top: calc(50vh - 250px);
+}
+.donate-div-donation8 {
+  left: -1250px;
+  top: calc(50vh - 250px);
+}
 
 .donate-options-container {
   display: inline-block;
@@ -260,6 +281,22 @@ input:invalid ~ span {
   margin: 10px 0px;
 }
 
+.donate-submitted-container {
+  display: flex;
+  flex-wrap: wrap 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.donate-submitted-container {
+  font-size: 40px;
+}
+
+#adios { 
+  color: var(--main-third-color);
+  padding-left: 20px;
+}
+
 .donate-button-root {
   display: inline-block;
   position: absolute;
@@ -295,6 +332,12 @@ input:invalid ~ span {
   width: 100px;
   height: 100px;
 }
+.donate-button-animation-jump {
+  animation: donateAnimationJump 1s 3
+}
+.donate-button-animation-flip {
+  animation: donateAnimationJump 1s 2;
+}
 
 .donate-button-right {
   background-image: url("../public/pix/biker_right.png");
@@ -309,14 +352,30 @@ input:invalid ~ span {
   animation: bikerAnimationLeft 1s alternate;
 }
 
-@keyframes donateAnimation {
+@keyframes donateAnimationJump {
   0% {
-      transform: rotate(10deg);
+      transform: translate(0, 0%) rotate(0);
+  }
+  50% { 
+    transform: translate(0%, -100%) rotate(-10deg);
   }
   100% {
-      transform: rotate(20deg);
+      transform: translate(0%, 0%) rotate(-360deg);
   }
 }
+@keyframes donateAnimationFlip {
+  0% {
+      transform: rotate(0);
+  }
+  50% { 
+    transform: rotate(-10deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
+
 @keyframes bikerAnimationRight {
   to {
     transform: rotate(-30deg);

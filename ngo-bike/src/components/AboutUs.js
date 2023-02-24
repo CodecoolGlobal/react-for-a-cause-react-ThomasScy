@@ -157,6 +157,7 @@ export default function AboutUs() {
 
     return (
         <section id="about" className="about">
+            <h1 className="about-titel">About us</h1>
             <div id="about-info-container">
                 <div id="about-info-text-container">
                     <div id="about-info-text" className={textFading}><p>{infoText}</p></div>

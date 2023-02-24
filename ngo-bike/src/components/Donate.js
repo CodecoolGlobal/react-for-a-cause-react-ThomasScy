@@ -1,16 +1,24 @@
 import React, {useState} from "react";
 import DonateFormInput from "./DonateFormInput";
 
+let interval = null;
+
 export default function Donate() {
     const donatePos = [
         {left: "200px", top: "500px"}, 
         {left: "200px", top: "300px"},
     ];
-
+    
     const [donateDivClass, setDonateDivClass] = useState("donate-div-donation1");
     const [donateOptionsState, setDonateOptionsState] = useState("");
     const [bikerAnimation, setBikerAnimation] = useState("");
     const [bikerIconPosition, setBikerIconPosition] = useState("donate-button-right");
+    const [waitingAnimation, setWaitingAnimation] = useState("");
+    const [formDisplay, setFormDisplay] = useState("flex");
+    const [thanksDisplay, setThanksDisplay] = useState("none");
+    const [formRootDisplay, setFormRootDisplay] = useState("absolute");
+    const [ciaoVisibility, setCiaoVisibility] = useState("hidden");
+    
 
     const [values, setValues] = useState({
         userName: "",
@@ -57,8 +65,10 @@ export default function Donate() {
     document.body.style.overflowY = donateDivClass === "donate-div-donation2" || donateDivClass === "donate-div-donation5" ? "hidden" : "";
 
     function handleClick() {
-        console.log("clicked")
+        clearInterval(interval);
+        setWaitingAnimation("");
         donateDivClass === "donate-div-donation1" || donateDivClass === "donate-div-donation2" ? donationMoveRight() : donationMoveLeft();
+        setTimeout(() => interval = setInterval(() => setWaitingAnimation("donate-button-animation-flip"), 4000), 1000);
     };
 
     function donationMoveRight() {
@@ -92,6 +102,15 @@ export default function Donate() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(values);
+        setFormDisplay("none");
+        setThanksDisplay("flex");
+        setInterval(() => setCiaoVisibility("visible"), 2200);
+        setInterval(() => {
+            donateDivClass === "donate-div-donation2" ? 
+            setDonateDivClass("donate-div-donation7") : 
+            setDonateDivClass("donate-div-donation8")
+        }, 3000);
+        setInterval(() => setFormRootDisplay("none"), 4000);
     };
 
     const onChange = (e) => {
@@ -99,20 +118,24 @@ export default function Donate() {
     }
 
     return (
-        <div className={`donate-div ${donateDivClass}`}>
+        <div className={`donate-div ${donateDivClass}`} style={{display: formRootDisplay}}>
             <div className={`donate-options-container ${donateOptionsState}`}>
-                <div className="donate-form-container">
-                <form onSubmit={handleSubmit}>
-                    <h2>Every donation counts!</h2>
-                    {inputs.map((input) => (
-                        <DonateFormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
-                    ))}
-                    <button>Submit</button>
-                </form>
+                <div className="donate-form-container" style={{display: formDisplay}}>
+                    <form onSubmit={handleSubmit}>
+                        <h2>Every donation counts!</h2>
+                        {inputs.map((input) => (
+                            <DonateFormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
+                        ))}
+                        <button>Submit</button>
+                    </form>
+                </div>
+                <div className="donate-submitted-container" style={{display: thanksDisplay}}>
+                    <h1>Thank you!</h1>
+                    <h1 id="adios" style={{visibility: ciaoVisibility}}>ADIOS!</h1>
                 </div>
             </div>
             <div className="donate-button-root">
-                <div id="donate-button" className={`${bikerAnimation} ${bikerIconPosition}`} onClick={handleClick}></div>
+                <div id="donate-button" className={`${bikerAnimation} ${bikerIconPosition} ${waitingAnimation}`} onClick={handleClick}></div>
             </div>
         </div>
     )
