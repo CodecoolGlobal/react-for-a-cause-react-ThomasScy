@@ -12,7 +12,6 @@ export default function Contact() {
 
   const handleInput = (input) => {
     const contactSection = document.querySelector("#contact");
-    console.log(contactSection)
     contactSection.scrollIntoView(false);
 
     const newData = { ...data };
