@@ -25,7 +25,7 @@ export default function LandingPage() {
                 effect={"fade"}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 5000,
+                    delay: 20000,
                     disableOnInteraction: false,
                 }}
                 speed={3000}

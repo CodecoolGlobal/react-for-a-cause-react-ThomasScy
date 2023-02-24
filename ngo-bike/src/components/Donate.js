@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import DonateFormInput from "./DonateFormInput";
 
 let interval = null;
+let virgin = true;
+
 
 export default function Donate() {
     const donatePos = [
@@ -19,6 +21,10 @@ export default function Donate() {
     const [formRootDisplay, setFormRootDisplay] = useState("absolute");
     const [ciaoVisibility, setCiaoVisibility] = useState("hidden");
     
+    if (virgin) {
+        interval = setInterval(() => setWaitingAnimation("donate-button-animation-flip"), 4000);
+        virgin = false;
+    };
 
     const [values, setValues] = useState({
         userName: "",
