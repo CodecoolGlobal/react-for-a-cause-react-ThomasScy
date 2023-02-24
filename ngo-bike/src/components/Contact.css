@@ -27,16 +27,14 @@
 }
 
 .contact input {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
     width: 20rem;
     height: 2rem;
     border-radius: 0.25rem;
     border: none;
-    box-shadow: 1px 1px 3px var(--main-first-color);
     text-align: center;
     font-size: 1rem;
-    background-color: #e6d5b83f;
-    backdrop-filter: blur(3px);
+    background-color: #F2F2F2;
     color: var(--main-first-color);
 }
 
@@ -49,20 +47,18 @@
 
 .contact input::placeholder {
     opacity: 1.0;
-    color: var(--main-fourth-color);
+    color: #aaaaaa;
 }
 
 .contact textarea {
     margin-bottom: 0.25rem;
     width: 20rem;
-    height: 5rem;
+    height: 10rem;
     border-radius: 0.25rem;
     border: none;
-    box-shadow: 1px 1px 3px var(--main-first-color);
     text-align: center;
     font-size: 1rem;
-    background-color: #e6d5b83f;
-    backdrop-filter: blur(3px);
+    background-color: #F2F2F2;
     color: var(--main-first-color);
     resize: vertical;
 }
@@ -76,7 +72,7 @@
 
 .contact textarea::placeholder {
     opacity: 1.0;
-    color: var(--main-fourth-color);
+    color: #aaaaaa;
 }
 
 .contact button {
@@ -85,19 +81,37 @@
     width: 8rem;
     border-radius: 0.25rem;
     border: none;
-    box-shadow: 1px 1px 3px var(--main-first-color);
+    /* box-shadow: 1px 1px 3px var(--main-first-color); */
     text-align: center;
     font-size: 1rem;
-    background-color: #e6d5b83f;
-    backdrop-filter: blur(3px);
+    background-color: var(--main-fourth-color);
     color: var(--main-first-color);
 }
 
 .contact button:hover {
-    background-color: var(--main-fourth-color);
+    background-color: var(--main-third-color);
 }
 
-.contact div {
+.contact .container {
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: #e5e5cb3d;
+    backdrop-filter: blur(3px);
+    box-shadow: 1px 1px 3px var(--main-first-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact p {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    width: 20rem;
+    text-align: center;
+}
+
+.contact .thx-container {
     width: 20rem;
     padding: 1rem;
     border-radius: 0.25rem;
@@ -107,4 +121,25 @@
     box-shadow: 1px 1px 3px var(--main-first-color);
     color: black;
     text-shadow: 1px 1px 2px white;
+}
+
+@media (max-width: 768px) {
+    .nav-elements ul li:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact .container {
+        width: 20rem;
+    }
+    .contact input {
+        width: 15rem;
+    }
+    .contact textarea {
+        width: 15rem;
+    }
+    .contact p {
+        width: 15rem;
+    }
 }
