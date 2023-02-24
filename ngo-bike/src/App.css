@@ -227,6 +227,39 @@
   z-index: 5;
 }
 
+.donate-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.donate-form-container h3 {
+  text-align: center;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+.formInput span {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:invalid ~ span {
+  display: block;
+}
+
+.donateInput {
+  padding: 15px;
+  margin: 10px 0px;
+}
+
 .donate-button-root {
   display: inline-block;
   position: absolute;

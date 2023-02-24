@@ -85,27 +85,32 @@ export default function AboutUs() {
         setTimeout(() => {
             setInfoRotation("");
             setBubbleRotation("");
-            setBubbleActivityStatus();
         }, 1000);
     };
     function rotateCcw(id) {
         setInfoRotation("about-bubble-rotator-quarter-rotation-ccw");
         setBubbleRotation("about-bubble-rotation-quarter");
         updateInfoText(id);
-        setTimeout(() => updateBubblePosition(-1), 1000);
+        setTimeout(() => {updateBubblePosition(-1);
+                            setBubbleActivityStatus(1);
+                         }, 1000);
 
     };
     function rotateHalf(id) {
         setInfoRotation("about-bubble-rotator-half-rotation");
         setBubbleRotation("about-bubble-rotation-half-ccw");
         updateInfoText(id);
-        setTimeout(() => updateBubblePosition(2), 1000);
+        setTimeout(() => {updateBubblePosition(2);
+                            setBubbleActivityStatus(2);
+                         }, 1000);
     };
     function rotateQuarter(id) {
         setInfoRotation("about-bubble-rotator-quarter-rotation");
         setBubbleRotation("about-bubble-rotation-quarter-ccw");
         updateInfoText(id);
-        setTimeout(() => updateBubblePosition(1), 1000);
+        setTimeout(() => {updateBubblePosition(1);
+                            setBubbleActivityStatus(3);
+                            }, 1000);
     };
     function updateInfoText(id) {
         setTextFAding("text-fade-out");
@@ -131,21 +136,21 @@ export default function AboutUs() {
         };
     };
 
-    function setBubbleActivityStatus() {
-        posBubble1.left === bubblePositions[0].left && 
-            posBubble1.top === bubblePositions[0].top ? 
+    function setBubbleActivityStatus(pos) {
+        posBubble1.left === bubblePositions[pos].left && 
+            posBubble1.top === bubblePositions[pos].top ? 
             setBubble1ActivityStatus("bubble1-active") : 
             setBubble1ActivityStatus("bubble1");
-        posBubble2.left === bubblePositions[0].left && 
-            posBubble2.top === bubblePositions[0].top ? 
+        posBubble2.left === bubblePositions[pos].left && 
+            posBubble2.top === bubblePositions[pos].top ? 
             setBubble2ActivityStatus("bubble2-active") : 
             setBubble2ActivityStatus("bubble2");
-        posBubble3.left === bubblePositions[0].left && 
-            posBubble3.top === bubblePositions[0].top ? 
+        posBubble3.left === bubblePositions[pos].left && 
+            posBubble3.top === bubblePositions[pos].top ? 
             setBubble3ActivityStatus("bubble3-active") : 
             setBubble3ActivityStatus("bubble3");
-        posBubble4.left === bubblePositions[0].left && 
-            posBubble4.top === bubblePositions[0].top ? 
+        posBubble4.left === bubblePositions[pos].left && 
+            posBubble4.top === bubblePositions[pos].top ? 
             setBubble4ActivityStatus("bubble4-active") : 
             setBubble4ActivityStatus("bubble4");
     }
