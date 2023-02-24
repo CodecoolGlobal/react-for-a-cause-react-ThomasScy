@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import DonateFormInput from "./DonateFormInput";
 
 export default function Donate() {
     const donatePos = [
@@ -51,12 +52,12 @@ export default function Donate() {
     return (
         <div className={`donate-div ${donateDivClass}`}>
             <div className={`donate-options-container ${donateOptionsState}`}>
-
+                <form>
+                    
+                </form>
             </div>
             <div className="donate-button-root">
-                <div id="donate-button" className={`${bikerAnimation} ${bikerIconPosition}`} onClick={handleClick}>
-                    MOVE ME!
-                </div>
+                <div id="donate-button" className={`${bikerAnimation} ${bikerIconPosition}`} onClick={handleClick}></div>
             </div>
         </div>
     )
