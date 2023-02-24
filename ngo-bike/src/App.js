@@ -18,9 +18,9 @@ function App() {
       <UpButton/>
       <div>
         <Navbar/>
-        <div className="container"><LandingPage/></div>
+        <LandingPage/>
         <AboutUs/>
-        <Projects/>
+        {/* <Projects/> */}
         <Contact/>
         <Footer/>
       </div>

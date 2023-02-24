@@ -51,7 +51,7 @@ export default function Navbarcopy() {
                             >About
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link
                                 activeClass="active"
                                 to="projects"
@@ -61,7 +61,7 @@ export default function Navbarcopy() {
                                 duration={scrollDurationMs}
                             >Projects
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link
                                 activeClass="active"

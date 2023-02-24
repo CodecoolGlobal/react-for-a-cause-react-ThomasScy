@@ -24,10 +24,10 @@ export default function LandingPage() {
                 spaceBetween={0}
                 effect={"fade"}
                 centeredSlides={true}
-                // autoplay={{
-                //     delay: 5000,
-                //     disableOnInteraction: false,
-                // }}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
                 speed={3000}
                 pagination={{
                     clickable: true,
