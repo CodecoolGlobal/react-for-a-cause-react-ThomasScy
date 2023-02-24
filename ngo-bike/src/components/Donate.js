@@ -22,7 +22,10 @@ export default function Donate() {
     const [ciaoVisibility, setCiaoVisibility] = useState("hidden");
     
     if (virgin) {
-        interval = setInterval(() => setWaitingAnimation("donate-button-animation-flip"), 4000);
+        interval = setInterval(() => {
+            setWaitingAnimation("donate-button-animation-flip");
+            setTimeout(() => setWaitingAnimation(""), 2000)}
+            , 5000);
         virgin = false;
     };
 
@@ -74,7 +77,10 @@ export default function Donate() {
         clearInterval(interval);
         setWaitingAnimation("");
         donateDivClass === "donate-div-donation1" || donateDivClass === "donate-div-donation2" ? donationMoveRight() : donationMoveLeft();
-        setTimeout(() => interval = setInterval(() => setWaitingAnimation("donate-button-animation-flip"), 4000), 1000);
+        setTimeout(() => interval = setInterval(() => {
+            setWaitingAnimation("donate-button-animation-flip");
+            setTimeout(() => setWaitingAnimation(""), 2000)}
+            , 5000), 1000);
     };
 
     function donationMoveRight() {
@@ -137,7 +143,7 @@ export default function Donate() {
                 </div>
                 <div className="donate-submitted-container" style={{display: thanksDisplay}}>
                     <h1>Thank you!</h1>
-                    <h1 id="adios" style={{visibility: ciaoVisibility}}>ADIOS!</h1>
+                    <h1 id="adios" style={{visibility: ciaoVisibility}}>SEE YA!</h1>
                 </div>
             </div>
             <div className="donate-button-root">
